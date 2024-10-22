@@ -1,0 +1,48 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "8782c750c3fbbbe83fa7485232ad463d"
+name = "efficient-account-app"
+handle = "efficient-account-app-10"
+application_url = "https://tag-presence-myth-professor.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "rjee-test-app.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://example.com/api/auth",
+  "https://prescription-mn-meaning-last.trycloudflare.com/auth/callback",
+  "https://prescription-mn-meaning-last.trycloudflare.com/auth/shopify/callback",
+  "https://prescription-mn-meaning-last.trycloudflare.com/api/auth/callback",
+  "https://tag-presence-myth-professor.trycloudflare.com/auth/callback",
+  "https://tag-presence-myth-professor.trycloudflare.com/auth/shopify/callback",
+  "https://tag-presence-myth-professor.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "customers/data_request" ]
+  uri = "/webhooks/customers/data_request"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "customers/redact" ]
+  uri = "/webhooks/customers/redact"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "shop/redact" ]
+  uri = "/webhooks/shop/redact"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[pos]
+embedded = false
