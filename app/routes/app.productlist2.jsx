@@ -14,7 +14,7 @@ export const loader = async ({request}) => {
 
   const response = await admin.graphql(`#graphql
     query ($after: String) {
-      products(first: 3, after: $after) {
+      products(first: 5, after: $after) {
         edges {
           node {
             id
@@ -81,23 +81,11 @@ export default function Products() {
   }];
 
   const handleNextPage = async () => {
-    const response = await fetch(`/app/productlist?after=${endCursor}`, {
-      method: 'GET', headers: {
-        'Accept': 'application/json',  // Request JSON format
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    const data = await response.json();  // Parse the JSON response
-    const {products: newProducts, hasNextPage: newHasNextPage, endCursor: newEndCursor} = data;
-
+    const response = await fetch(`/api/shopify/graphql?after=${endCursor}`);
+    const {products: newProducts, hasNextPage: newHasNextPage, endCursor: newEndCursor} = await response.json();
     // Merge new products with the existing products
     setAllProducts(prevProducts => [...prevProducts, ...newProducts]);
   };
-
 
   return (<Page>
     <TitleBar title="Product Listing"/>

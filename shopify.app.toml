@@ -3,7 +3,7 @@
 client_id = "8782c750c3fbbbe83fa7485232ad463d"
 name = "efficient-account-app"
 handle = "efficient-account-app-10"
-application_url = "https://tag-presence-myth-professor.trycloudflare.com"
+application_url = "https://fossil-inspections-promotions-safely.trycloudflare.com"
 embedded = true
 
 [build]
@@ -22,7 +22,19 @@ redirect_urls = [
   "https://prescription-mn-meaning-last.trycloudflare.com/api/auth/callback",
   "https://tag-presence-myth-professor.trycloudflare.com/auth/callback",
   "https://tag-presence-myth-professor.trycloudflare.com/auth/shopify/callback",
-  "https://tag-presence-myth-professor.trycloudflare.com/api/auth/callback"
+  "https://tag-presence-myth-professor.trycloudflare.com/api/auth/callback",
+  "https://helps-dublin-passing-tablets.trycloudflare.com/auth/callback",
+  "https://helps-dublin-passing-tablets.trycloudflare.com/auth/shopify/callback",
+  "https://helps-dublin-passing-tablets.trycloudflare.com/api/auth/callback",
+  "https://interactions-cannon-presented-refresh.trycloudflare.com/auth/callback",
+  "https://interactions-cannon-presented-refresh.trycloudflare.com/auth/shopify/callback",
+  "https://interactions-cannon-presented-refresh.trycloudflare.com/api/auth/callback",
+  "https://cumulative-visitor-university-hybrid.trycloudflare.com/auth/callback",
+  "https://cumulative-visitor-university-hybrid.trycloudflare.com/auth/shopify/callback",
+  "https://cumulative-visitor-university-hybrid.trycloudflare.com/api/auth/callback",
+  "https://fossil-inspections-promotions-safely.trycloudflare.com/auth/callback",
+  "https://fossil-inspections-promotions-safely.trycloudflare.com/auth/shopify/callback",
+  "https://fossil-inspections-promotions-safely.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
